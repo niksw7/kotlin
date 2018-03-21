@@ -130,8 +130,6 @@ compileBuiltinsKotlin {
 }
 compileKotlin {
     dependsOn(":core:builtins:serialize")
-    dependsOn(":prepare:build.version:writeStdlibVersion")
-    dependsOn(":kotlin-stdlib-common:preprocessSourcesMain")
     kotlinOptions {
         freeCompilerArgs = [
                 "-version",
@@ -143,10 +141,6 @@ compileKotlin {
                 "-module-name", "kotlin-stdlib"
         ]
     }
-}
-
-compileTestKotlin {
-    dependsOn(":kotlin-stdlib-common:preprocessSourcesTest")
 }
 
 

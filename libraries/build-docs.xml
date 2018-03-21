@@ -34,7 +34,6 @@
                 <pathelement location="${basedir}/../gradle/wrapper/gradle-wrapper.jar"/>
             </classpath>
             <arg line="--no-daemon"/>
-            <arg line=":kotlin-stdlib-common:preprocessSourcesMain"/>
             <arg line=":kotlin-stdlib:builtinsJar"/>
             <!--<arg line=":kotlin-stdlib:distJar"/>-->
         </java>
@@ -76,7 +75,7 @@
             <sourceRoot path="../core/builtins/native" />
             <sourceRoot path="../core/builtins/src" />
             <sourceRoot path="stdlib/common/src" />
-            <sourceRoot path="stdlib/common/build/common-sources" />
+            <sourceRoot path="stdlib/src" />
 
             <!--<sourcelink path=".." url="http://github.com/JetBrains/kotlin/blob/${github.revision}" linesuffix="#L"/>-->
 
